@@ -1,0 +1,11 @@
+/var/logs/file_integrity_checker.log {              
+         rotate 7                                                                                          
+         compress 
+         size 50M 
+         missingok
+         notifempty
+         postrotate
+            systemctl restart file_integrity_checker
+	 endscript 
+}                                 
+   

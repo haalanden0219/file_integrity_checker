@@ -3,9 +3,9 @@
 # Defining files/directories
 SERVICE_NAME="file_integrity_checker"
 SERVICE_FILE="$SERVICE_NAME.service"
-LOGROTATE_FILE="$SERVICE_NAME.logrotate"
+LOGROTATE_FILE="$SERVICE_NAME"
 SERVICE_PATH="/etc/systemd/system/filechecker/"
-LOGROTATE_PATH="/etc/logrotate.d"
+LOGROTATE_PATH="/etc/logrotate.d/"
 LOGFILE_NAME="file_integrity_checker.log"
 LOGFILE_PATH="/var/log/" 
 SERVICE_GROUP="fileman_group"
