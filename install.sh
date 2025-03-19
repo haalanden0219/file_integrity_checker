@@ -29,7 +29,7 @@ touch "$LOGFILE_PATH/$LOGFILE_NAME"
 
 # Set up groups - need to set up verifications
 groupadd "$SERVICE_GROUP"
-useradd -m -d "$INSTALL_DIR" "$SERVICE_USER"
+useradd --system -no-create-home "$SERVICE_USER"
 passwd "$SERVICE_USER"
 usermod -g "$SERVICE_GROUP" "$SERVICE_USER"
 
