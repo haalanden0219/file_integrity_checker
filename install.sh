@@ -10,8 +10,8 @@ LOGFILE_NAME="file_integrity_checker.log"
 LOGFILE_PATH="/var/log" 
 SERVICE_GROUP="fileman_group"
 SERVICE_USER="fileman"
-INSTALL_DIR="/opt/filechecker"
-GIT_REPO_URL="https://github.com/haalanden0219/file_integrity_checker.git"
+INSTALL_DIR=$PWD
+##GIT_REPO_URL="https://github.com/haalanden0219/file_integrity_checker.git"
 
 # Creating Directories and permsissions
 mkdir -p "$INSTALL_DIR"
@@ -19,7 +19,7 @@ mkdir -p "$SERVICE_PATH"
 
 # Clone git repo
 cd "$INSTALL_DIR"
-git clone "$GIT_REPO_URL"
+##git clone "$GIT_REPO_URL"
 
 # Create user files
 touch "$INSTALL_DIR/baseline.hash" "$INSTALL_DIR/paths.conf" "$INSTALL_DIR/updated.hash"
