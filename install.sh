@@ -4,13 +4,13 @@
 SERVICE_NAME="file_integrity_checker"
 SERVICE_FILE="$SERVICE_NAME.service"
 LOGROTATE_FILE="$SERVICE_NAME"
-SERVICE_PATH="/etc/systemd/system/filechecker/"
-LOGROTATE_PATH="/etc/logrotate.d/"
+SERVICE_PATH="/etc/systemd/system/filechecker"
+LOGROTATE_PATH="/etc/logrotate.d"
 LOGFILE_NAME="file_integrity_checker.log"
-LOGFILE_PATH="/var/log/" 
+LOGFILE_PATH="/var/log" 
 SERVICE_GROUP="fileman_group"
 SERVICE_USER="fileman"
-INSTALL_DIR="/opt/filechecker/"
+INSTALL_DIR="/opt/filechecker"
 GIT_REPO_URL="https://github.com/haalanden0219/file_integrity_checker.git"
 
 # Creating Directories and permsissions
@@ -34,7 +34,7 @@ passwd "$SERVICE_USER"
 usermod -g "$SERVICE_GROUP" "$SERVICE_USER"
 
 # mv log and service file
-mv "$INSTALL_DIR" "$SERVICE_FILE" "$SERVICE_PATH"
+mv "$INSTALL_DIR/$SERVICE_FILE" "$SERVICE_PATH"
 chown root:root "$SERVICE_PATH/$SERVICE_FILE"
 
 mv "$INSTALL_DIR/$LOGROTATE_FILE" "$LOGROTATE_PATH"
